@@ -1,0 +1,31 @@
+.displayLight,
+.displayDark {
+	margin: 100px auto;
+	padding: 15px;
+	width: 300px;
+	min-height: 300px;
+	border-radius: 10px;
+	border: 3px solid rgb(67, 67, 75);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.displayLight {
+	background-color: rgb(168, 175, 174);
+}
+
+.displayDark {
+	background-color: rgb(59, 99, 93);
+}
+
+.value {
+	font-size: 55px;
+}
+
+.buttons {
+	display: flex;
+}

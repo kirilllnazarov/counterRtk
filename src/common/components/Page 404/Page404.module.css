@@ -1,13 +1,25 @@
+.errPage{ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .title {
-    text-align: center;
-    font-size: 250px;
-    margin: 0;
-  }
-  
-  .subTitle {
-    text-align: center;
-    font-size: 50px;
-    margin: 0;
-    text-transform: uppercase;
-  }
-  
+	font-size: 250px;
+}
+
+.subTitle {
+	font-size: 50px;
+	text-transform: uppercase;
+}
+
+.button {
+	background-color: white;
+	color: black;
+	padding: 5px;
+	border: 2px solid black;
+	border-radius: 5px;
+	font-size: 15px;
+	cursor: pointer;
+}

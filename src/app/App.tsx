@@ -1,7 +1,5 @@
-function App() {
-	return <>
-  
-  </>;
-}
+import { Router } from "../common/components/Router/Router";
 
-export default App;
+export function App() {
+	return <Router />;
+}
