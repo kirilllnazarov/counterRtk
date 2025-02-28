@@ -16,7 +16,7 @@ export const counterSlice = createSlice({
 		}),
 
 		setStartValue: create.reducer<{ startValue: number }>((state, action) => {
-			state.maxValue = action.payload.startValue;
+			state.startCount = action.payload.startValue;
 		}),
 
 		setMaxValue: create.reducer<{ maxValue: number }>((state, action) => {

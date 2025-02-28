@@ -1,12 +1,14 @@
-import type { ChangeEvent, InputHTMLAttributes } from "react";
+import type { InputHTMLAttributes } from "react";
 
-type UniversalInputType = InputHTMLAttributes<HTMLInputElement>;
+type UniversalInputType = InputHTMLAttributes<HTMLInputElement> & {
+	label?: string;
+};
 
-export const UniversalInput = ({ value, onChange, ...props }: UniversalInputType) => {
-
-	function onChangeHandler(event: ChangeEvent<HTMLInputElement>) {
-        console.log(event.currentTarget.value);
-		onChange?.(event)
-	}
-	return <input type={"number"} value={value} onChange={onChangeHandler} {...props} />;
+export const UniversalInput = ({ label, value, onChange, ...props }: UniversalInputType) => {
+	return (
+		<fieldset>
+			<legend>{label}</legend>
+			<input type={"number"} value={value} onChange={onChange} {...props} />
+		</fieldset>
+	);
 };
