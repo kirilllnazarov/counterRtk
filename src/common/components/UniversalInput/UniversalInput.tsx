@@ -1,4 +1,5 @@
 import type { InputHTMLAttributes } from "react";
+import s from './UniversalInput.module.css'
 
 type UniversalInputType = InputHTMLAttributes<HTMLInputElement> & {
 	label?: string;
@@ -6,7 +7,7 @@ type UniversalInputType = InputHTMLAttributes<HTMLInputElement> & {
 
 export const UniversalInput = ({ label, value, onChange, ...props }: UniversalInputType) => {
 	return (
-		<fieldset>
+		<fieldset className={s.fieldset}>
 			<legend>{label}</legend>
 			<input type={"number"} value={value} onChange={onChange} {...props} />
 		</fieldset>

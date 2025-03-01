@@ -3,20 +3,20 @@ import { createSlice } from "@reduxjs/toolkit";
 export const counterSlice = createSlice({
 	name: "counter",
 	initialState: {
-		startCount: 0 as number,
+		incValue: 0 as number,
 		maxValue: 999 as number,
 	},
 	reducers: (create) => ({
 		increment: create.reducer((state) => {
-			state.startCount += 1;
+			state.incValue += 1;
 		}),
 
 		reset: create.reducer((state) => {
-			(state.startCount = 0), (state.maxValue = 0);
+			(state.incValue = 0), (state.maxValue = 0);
 		}),
 
 		setStartValue: create.reducer<{ startValue: number }>((state, action) => {
-			state.startCount = action.payload.startValue;
+			state.incValue = action.payload.startValue;
 		}),
 
 		setMaxValue: create.reducer<{ maxValue: number }>((state, action) => {
@@ -24,7 +24,7 @@ export const counterSlice = createSlice({
 		}),
 	}),
 	selectors: {
-		selectStartValue: (state) => state.startCount,
+		selectStartValue: (state) => state.incValue,
 		selectMaxValue: (state) => state.maxValue,
 	},
 });

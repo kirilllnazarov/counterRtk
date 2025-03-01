@@ -35,11 +35,23 @@
 	cursor: pointer;
 }
 
-.value {
+.value,
+.valueRed {
 	font-size: 95px;
+}
+
+.valueRed {
+	color: red;
 }
 
 .buttons {
 	display: flex;
 	gap: 30px;
+}
+
+.button {
+	border: 1px solid black;
+	border-radius: 5px;
+	width: 75px;
+	height: 20px;
 }
